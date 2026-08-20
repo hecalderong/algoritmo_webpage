@@ -1,0 +1,205 @@
+@charset "utf-8";
+/* CSS Document */
+ 
+	  /* 
+	  #0067CF: #0DA05A
+	  
+	  	font-family: 'Nunito Sans', sans-serif; 
+	font-family: 'Rubik', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	font-family: 'Fredoka', sans-serif;
+	font-family: 'Libre Baskerville', serif;
+	font-family: 'Saira', sans-serif;
+	font-family: 'Montserrat', sans-serif;  
+  font-family: "Heebo", sans-serif;
+  font-family: "Geologica", sans-serif;
+  font-family: "Inter Tight", sans-serif;
+	 */
+ 
+
+
+
+
+/*##########################################################
+	   0.0 Start
+##########################################################*/ 	  
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box; 
+		cursor: none;
+    }
+ *:hover{ 
+		cursor: none;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%; 
+      overflow-x: hidden; 
+		background-color: #eee;
+		
+  font-family: "Geologica", sans-serif;
+		font-weight: 500; 
+    }  
+
+/* Estilo para la bolita */
+.cursor {
+  width: 20px;
+  height: 20px;
+  background-color: yellowgreen;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: all 0.1s ease;
+}
+/* Cuando el cursor está sobre un <a> */
+.cursor.hover-link {
+  background-color: transparent;
+  border: 0.5px solid yellowgreen;
+}
+
+ /*##########################################################
+	   0.0 SCROLLBAR
+##########################################################*/ 
+::-webkit-scrollbar{
+  width: 10px;
+  background: #000;
+	z-index: 999;
+		position:absolute; 
+} 
+::-webkit-scrollbar-track{  
+  width: 8px;
+	z-index: 999;
+		position:absolute; 
+	
+	
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(33,33,33,0.5); 
+  border-radius: 33px;  
+	z-index: 999;
+		position:absolute; 
+}
+::-webkit-scrollbar-thumb:hover {
+	z-index: 999;
+		position:absolute; 
+}
+
+ .re{ 
+	background: linear-gradient(25grad,#000,#000,#111,#000,#000,#000,#222,#000);
+  padding: 5px;
+		    background-size: 400% 400%; 
+         animation: moveBg 5s ease infinite;
+	 color: yellowgreen;
+	 margin-right: 5px;
+	 border-radius: 3px;
+	  }
+
+ .check{  
+  padding: 5px; 
+	 font-weight: 600;
+	 color: #333;
+	 margin-right: 5px;
+	 border-radius: 3px;
+	  }
+
+  @keyframes moveBg { 
+    0%{background-position:0% 0%; }  
+	25%{background-position:25% 25%; } 
+	50%{background-position:75% 75%; }
+	55%{background-position:100% 100%; }
+	75%{background-position:80% 80%;  }
+	80%{background-position:70% 70%; } 
+    100%{background-position:0% 0%;   }
+	
+	
+}
+
+
+/*##########################################################
+	   0.0 header
+##########################################################*/    
+.header{
+	width: 100%;
+	height: 50vh;
+	background-image:url("../images/bg.jpg");
+	background-size: cover;
+	
+	  display: flex;
+  align-items: center;   /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */  
+}
+.header p{	 
+	display: inline-block;
+  color: white;
+  font-size: 13vh; 
+  line-height: 1; 
+  margin: 0; /* MUY IMPORTANTE */
+  padding: 0;
+  width: auto; 
+}
+#btn{ 
+	position: absolute;
+	left: 13px;
+	top: 13px;
+	display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;           /* Ancho del botón */
+  height: 60px;          /* Alto del botón */
+  background-color: black;/* Color de fondo */
+  color: yellowgreen;               /* Color del texto */
+  text-decoration: none;      /* Sin subrayado */
+  border-radius: 50%;         /* Hace que sea redondo */
+  font-size: 16px;            /* Tamaño del texto */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#btn:hover{
+	
+  background-color: yellowgreen;/* Color de fondo */
+  color: black;               /* Color del texto */
+}
+/*##########################################################
+	   0.0 legal container
+##########################################################*/ 
+.legal-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #111;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 6px;
+}
+.legal-text {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: #000;
+}
+ 
+/* Mobile V 0.0.1  */
+@media (max-width: 767px){
+	.header p{	 
+	display: inline-block;
+  color: white;
+  font-size: 15px; 
+  line-height: 1; 
+  margin: 0; /* MUY IMPORTANTE */
+  padding: 0;
+  width: auto; 
+}
+}
